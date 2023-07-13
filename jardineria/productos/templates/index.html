@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bookstop</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/fondo2.png' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/reloj.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+    
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    
+
+</head>
+
+<body>
+    
+   
+
+    
+
+
+
+
+
+          <h3>Tienda de Jardinería</h3>
+
+        <div class="slider-frame">
+            <ul>
+                <li><img src="{% static 'img/jardineria23.jpg' %}"
+                    alt=""></li>
+                <li><img src="{% static 'img/jardin 22.jpg' %}" alt=""></li>
+                <li><img src="{% static 'img/jardin 23.jpg' %}"
+                    alt=""></li>
+                <li><img src="{% static 'img/ongs1.jpg' %}"
+                    alt=""></li>
+
+    
+                
+            </ul>
+        </div>
+    
+
+        <div class="contenedor">
+        
+            <h2 onmouseover="style.color = 'green'" onmouseout="style.color= 'black'">
+                Nuestra Tienda
+                </h2>
+            
+                <img src="{% static 'img/portada.png' %}" alt="Quiénes Somos" class="img-fluid">
+    
+    
+    <p>Esta tienda está destinada a la gran variedad de productos para lo que es la jardinería
+        en general desde un macetero hasta grandes árboles y una gran variedad de flores o lo que 
+        se necesite para el hogar.
+
+
+    </p>
+    <br>
+         
+    </div>
+    
+        <div class="contenedor">
+            
+            <h2 onmouseover="style.color = 'green'" onmouseout="style.color= 'black'">
+                Sin Fines de Lucro
+                </h2>
+         
+                <img src="{% static 'img/lucro.png' %}" alt="Quiénes Somos" class="img-fluid">
+    
+    <p>  Todo lo recaudado en esta tienda será entregado a una organización sin fines de lucro en busca de ayudar 
+        a los demás con nuestra de venta de productos con la ayuda de nuestros vecinos del lugar que 
+        empezamos con esta causa.
+</p>
+                
+                    
+    <br>
+    
+    </div>
+
+    <div class="wrap">
+        <div class="widget">
+            <div class="fecha">
+    
+                <p id="diaSemana" class="diaSemana"></p>
+                <p id="dia" class="dia"></p>
+                <p>de </p>
+                <p  id="mes" class="mes"></p>
+                <p>del </p>
+                <p id="year" class="year"></p>
+                <p>-</p>
+                
+                <p id="horas" class="horas"></p>
+                <p>:</p>
+                <p id="minutos" class="minutos"></p>
+                <p>:</p>
+    
+                <p id="segundos" class="segundos"></p>
+                <p id="ampm" class="ampm"></p>
+            </div>
+        </div>
+    </div>
+
+
+        
+
+    </main><br>
+    <footer>
+
+        
+        <div class="row col-12">
+            <div class="col-lg-2">
+                <img src="{% static 'img/fondo3.png' %}" alt="logoBookStop" width="60px">
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'index' %}" id="linkFooter"><strong>INICIO</strong></a>
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'somos' %}" id="linkFooter"><strong>QUIENES SOMOS</strong></a>
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'contacto' %}" id="linkFooter"><strong>CONTACTO</strong></a>
+            </div>
+            <div class="col-lg-2">
+                <a href="{% url 'mostrar' %}" id="linkFooter"><strong>PRODUCTOS</strong></a>
+            </div>
+
+            
+                
+
+            <div class="col-lg-2">
+                <strong>Síguenos</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'icon/twitter.png' %}" alt="" width="30px" height="30px"
+                        style=" margin-left: 15px;">
+                    <img src="{% static 'icon/facebook.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                    <img src="{% static 'icon/insta.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'icon/house.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>ValleEncanto 411, Talagante</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'icon/smartphone.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>+569 41001278</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'icon/contact.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Jvalledelencanto@gmail.com</p>
+                </div>
+               
+
+               
+            </div>
+        </div>
+
+
+        
+    </footer>
+
+    
+<script src="{% static 'js/js.js' %}"></script>
+<script src="{% static 'js/reloj.js' %}"></script>
+<script src="{% static 'js/metodos.js' %}"></script>
+
+
+</body>
+</html>
+{% endblock %}

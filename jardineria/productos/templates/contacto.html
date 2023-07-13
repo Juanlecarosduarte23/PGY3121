@@ -1,0 +1,386 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contacto</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/logo_bookstop.png' %}" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js">
+
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/reloj.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/formulario.css' %}" rel="stylesheet">
+
+    
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    
+    <style>
+        body {
+            color:black;
+            font-size: 0.9em;
+            width:absolute;
+        }
+
+        p {
+            text-align: center;
+        }
+
+
+     
+        label.error {
+            color:red;
+            font-size: 0.8em;
+            width:200px;
+        }
+    </style>
+     <script>
+        $(function() 
+        {
+            $("#mi-Formulario").validate({
+                rules: {
+                        nom: {
+                            required:true,
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        pass:{
+                            required:true,
+                        },
+                        fono: {
+                            required:true,
+                            number:true
+                        },
+                        fecha: {
+                            required:true,
+                            
+                        },
+                        pass2: {
+                            required: true,
+                            equalTo: "#pass"
+                        }   
+                        
+                    }, //rules
+                messages: {
+    
+                    nom:{
+                        required: 'Ingrese nombre del usuario',
+                        minlength: 'Caracteres insuficientes'
+                    },
+                    email: {
+                        required: 'Ingresa tu correo electrónico',
+                        email: 'Formato de correo no válido'
+                    },
+                    pass: {
+                        required: 'Ingresa una contraseña',
+                        minlength: 'Caracteres insuficientes'
+                    },
+                    fono:{
+                        required: 'Ingrese un número de celular',
+                        minlength: 'Cantidad de digitos insuficiente'
+                    },
+                    fecha:{
+                        required: 'Seleccione una fecha válida',
+                        min: 'Fecha no corresponde'
+                    },
+                    pass2: {
+                        required: 'Reingresa la contraseña',
+                        equalTo: 'Las contraseñas ingresadas no coinciden',
+                        minlength: 'Caracteres insuficientes'
+    
+                    }
+                }//messages
+            }); //$('#mi-formulario').validate
+        }); 
+        </script>
+      
+      <script>
+        $(document).ready(function(){
+    
+            $("#revisar").click(function(){
+                $.get("https://mindicador.cl/api/dolar/20-06-2023",function(data){
+    
+                    $.each(data.serie,function(i,item)
+                    {
+                        $("#dolar").append("<tr><td>" + item.fecha + "</td><td>"+ item.valor );
+    
+                    });
+    
+                })
+    
+            });
+        });
+    
+    </script>
+    
+    
+    
+    <script>
+        function mouseDown() {
+          document.getElementById("myP").style.color = "red";
+        }
+        
+        function mouseUp() {
+          document.getElementById("myP").style.color = "blue";
+        }
+        </script>
+
+
+</head>
+<body>
+
+   
+            
+<h3>Contactanos</h3>
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()" >
+Complete el siguiente formulario con todos los datos solicitados para generar el buen ingreso de ellos.
+</p>
+
+
+
+          <body>
+
+            <div class="container">  
+                <form id="mi-Formulario" action="#">
+                        <div class="form-group">
+                            <label for="nom">Nombre Usuario: </label>
+                            <input type="text" name="nom" id="nom" minlength="3" required placeholder="Cachupin Dog" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico: </label>
+                            <input type="text" name="email" id="email" required placeholder="nombre@dominio.cl" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="fono">Telefono: </label>
+                            <input type="number" name="fono" id="fono" minlength="9" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha: </label>
+                            <input type="date" name="fecha" id="fecha" min="1930-01-01" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Contraseña:</label>
+                            <input type="password" id="pass" name="pass" minlength="8" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label id="pass2">  contraseña otra vez : </label>
+                            <input type="password" name="pass2" id="pass2" minlength="8" class="form-control"><br>
+                            
+                        </div>
+                        <br>
+
+                        <div class="form-group">
+                            <label>  Cuentanos : </label>
+                            <textarea id="carta" class="form-control" rows="7" onmousemove="colorGreen(this)" 
+                                    onmouseout="colorBlanco(this)">
+            
+                            </textarea><br>
+                        
+                            
+                            
+                            <input type="submit" value="Enviar" id="enviar" class="btn btn-success"> 
+                            <input type="reset" value="Limpiar" id="limpiar" class="btn btn-warning"> 
+
+                           
+                                        
+                </form>
+
+            </div>
+       
+
+
+            
+            
+
+
+    </div>
+
+
+        
+
+            <div class="container">
+                <h3>Ultimos Cambios Del Dolar de hoy</h3>
+        
+                <input type="button" value="Revisar" id="revisar" class="btn btn-primary"> 
+                <table class="table" id="dolar">
+                    <thead>                     
+                        <tr>                   
+                            <th>Fecha</th>         
+                            <th>Valor Dolar</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>                  
+        
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+
+
+            <div class="wrap">
+                <div class="widget">
+                    <div class="fecha">
+            
+                        <p id="diaSemana" class="diaSemana"></p>
+                        <p id="dia" class="dia"></p>
+                        <p>de </p>
+                        <p  id="mes" class="mes"></p>
+                        <p>del </p>
+                        <p id="year" class="year"></p>
+                        <p>-</p>
+                        
+                        <p id="horas" class="horas"></p>
+                        <p>:</p>
+                        <p id="minutos" class="minutos"></p>
+                        <p>:</p>
+            
+                    
+                        
+                        <p id="segundos" class="segundos"></p>
+                        <p id="ampm" class="ampm"></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+     
+        
+
+    
+
+
+</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Gracias"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Por Visitar "
+}
+</script>
+    <footer>
+
+        
+        <div class="row col-12">
+            <div class="col-lg-2">
+                <img src="{% static 'img/fondo3.png' %}" alt="logoBookStop" width="60px">
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'index' %}" id="linkFooter"><strong>INICIO</strong></a>
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'somos' %}" id="linkFooter"><strong>QUIENES SOMOS</strong></a>
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'contacto' %}" id="linkFooter"><strong>CONTACTO</strong></a>
+            </div>
+            <div class="col-lg-2">
+                <a href="{% url 'mostrar' %}" id="linkFooter"><strong>contacoS</strong></a>
+            </div>
+
+            
+                
+
+            <div class="col-lg-2">
+                <strong>Síguenos</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'icon/twitter.png' %}" alt="" width="30px" height="30px"
+                        style=" margin-left: 15px;">
+                    <img src="{% static 'icon/facebook.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                    <img src="{% static 'icon/insta.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'icon/house.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>ValleEncanto 411, Talagante</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'icon/smartphone.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>+569 41001278</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'icon/contact.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Jvalledelencanto@gmail.com</p>
+                </div>
+                
+
+               
+            </div>
+        </div>
+
+
+        
+    </footer>
+
+   
+</body>
+
+
+
+ 
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/validacion.js' %}"></script>
+
+
+
+<script src="{% static 'js/js.formulario2.js' %}"></script>
+<script src="{% static 'js/js.rest.js' %}"></script>
+<script src="{% static 'js/js.formulario.js' %}"></script>
+<script src="{% static 'js/js.js' %}"></script>
+<script src="{% static 'js/reloj.js' %}"></script>
+<script src="{% static 'js/metodos.js' %}"></script>
+
+
+<script src="https://kit.fontawesome.com/03a89292db.js"
+ crossorigin="anonymous"></script>
+
+</html>
+{% endblock %}

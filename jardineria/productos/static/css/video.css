@@ -1,0 +1,23 @@
+.yutub-video{
+    border: 3px;
+    height: 0px;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+}
+
+.yutub-video iframe{
+    position:absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+.video-wrapper{
+    width: 80%;
+    margin: auto;
+}
+

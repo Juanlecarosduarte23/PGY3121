@@ -1,0 +1,2 @@
+Usuario ADMIN: duocjuan contraseña:juan12345
+usuario normal: juan contraseña: duocjuan20

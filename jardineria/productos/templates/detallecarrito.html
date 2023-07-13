@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar detalle boleta</title>
+    {% load static %}
+
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/reloj.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/formulario.css' %}" rel="stylesheet">
+
+
+    <link href="{% static 'css/estilos2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h3> Detalle de Compra </h3><br><h3>Fecha: {{ fecha }}</h3>br><h3>Estado: Estamos preparando su compra</h3> br><h3>Usuario: {{ user }}</h3>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Código Boleta</th>
+                    <th>Nombre Producto</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prod in productos%}
+                <tr>
+                    <td>{{ prod.id_boleta }}</td>
+                    <td>{{ prod.id_producto }}</td>
+                    <td>{{ prod.cantidad }}</td>
+                    <td>{{ prod.subtotal }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+               
+            
+            <tr><td><h6>Impuesto: {{ total }}</h6></td>
+            <tr><td><h6>Envio: {{ total }}</h6></td>
+            <tr><td><h6>Total compra: {{ total }}</h6></td>
+            </tr>
+        </table>
+    </div>
+
+
+    
+         
+    <div class="wrap">
+        <div class="widget">
+            <div class="fecha">
+    
+                <p id="diaSemana" class="diaSemana"></p>
+                <p id="dia" class="dia"></p>
+                <p>de </p>
+                <p  id="mes" class="mes"></p>
+                <p>del </p>
+                <p id="year" class="year"></p>
+                <p>-</p>
+                
+                <p id="horas" class="horas"></p>
+                <p>:</p>
+                <p id="minutos" class="minutos"></p>
+                <p>:</p>
+    
+                <p id="segundos" class="segundos"></p>
+                <p id="ampm" class="ampm"></p>
+            </div>
+        </div>
+    </div>
+
+
+        
+
+    </main><br>
+</body>
+<footer>
+
+        
+    <div class="row col-12">
+        <div class="col-lg-2">
+            <img src="{% static 'img/fondo3.png' %}" alt="logoBookStop" width="60px">
+        </div>
+        <div class="col-lg-1">
+            <a href="{% url 'index' %}" id="linkFooter"><strong>INICIO</strong></a>
+        </div>
+        <div class="col-lg-1">
+            <a href="{% url 'somos' %}" id="linkFooter"><strong>QUIENES SOMOS</strong></a>
+        </div>
+        <div class="col-lg-1">
+            <a href="{% url 'contacto' %}" id="linkFooter"><strong>CONTACTO</strong></a>
+        </div>
+        <div class="col-lg-2">
+            <a href="{% url 'mostrar' %}" id="linkFooter"><strong>Productos</strong></a>
+        </div>
+
+        
+            
+
+        <div class="col-lg-2">
+            <strong>Síguenos</strong>
+            <br><br>
+            <div class="row">
+                <img src="{% static 'icon/twitter.png' %}" alt="" width="30px" height="30px"
+                    style=" margin-left: 15px;">
+                <img src="{% static 'icon/facebook.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                <img src="{% static 'icon/insta.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-3">
+
+            <strong>Contacto</strong>
+            <br><br>
+            <div class="row">
+                <img src="{% static 'icon/house.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>ValleEncanto 411, Talagante</p>
+            </div>
+            <div class="row">
+                <img src="{% static 'icon/smartphone.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>+569 41001278</p>
+            </div>
+            <div class="row">
+                <img src="{% static 'icon/contact.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>Jvalledelencanto@gmail.com</p>
+                
+            </div>
+        </div>
+    </div>
+
+
+    
+</footer>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/validacion.js' %}"></script>
+
+
+<script src="{% static 'js/js.js' %}"></script>
+<script src="{% static 'js/reloj.js' %}"></script>
+<script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
+
+</html>
+{% endblock %}

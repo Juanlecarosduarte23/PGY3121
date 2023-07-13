@@ -1,0 +1,27 @@
+1. instalar python
+2. instalar django : pip install django
+3. django-admin startproject MyWebpython -m django startproject Myweb
+4. Ubicarse en donde este manage.py  py manage.py startapp vehiculos
+5. Crear modelos de clases  py manage.py  makemigrations   py manage.py migrate
+6. Registrar los modelos en el admin
+7. Crear el super usuario --------- py manage.py createsuperuser
+8. Ejecutar servidor 
+
+py manage.py runserver
+
+
+
+
+pip install django-crispy-forms
+
+
+
+pip install django-crispy-forms==1.14.0
+
+
+
+
+
+
+
+pip install bootstrap4 pip install pillow

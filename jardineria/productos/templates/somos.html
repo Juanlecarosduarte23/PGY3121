@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bookstop</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/logo_bookstop.png' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/reloj.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/video.css' %}" rel="stylesheet">
+
+    
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+     rel="stylesheet">
+
+    
+
+</head>
+
+<body>
+    
+
+    <div class="contenedor">
+  
+        <h2 onmouseover="style.color = 'green'" onmouseout="style.color= 'black'">
+        QUIENES SOMOS
+        </h2>
+        
+        <div class="col-lg-6">
+            <img src="{% static 'img/portada.png' %}" alt="Quiénes Somos" class="img-fluid">
+        </div>
+    
+    
+    <p>"Valle del Encanto" fue creado por un grupo de vecinos que comenzó a realizar
+        la venta de productos de jardinería maceteros,
+        tierra de hojas, flores y arbustos, todo esto en ayuda a una fundación
+        sin fines de lucro.
+    </p>
+    <br>
+    <br>
+    
+    
+    
+    
+        
+    </div>
+    
+        <div class="contenedor">
+            <h2 onmouseover="style.color = 'green'" onmouseout="style.color= 'black'">
+               OBJETIVO 
+                </h2>
+                <div class="col-lg-6">
+                    <img src="{% static 'img/compra.png' %}" alt="Quiénes Somos" class="img-fluid">
+                </div>
+    
+    <p>   Nuestro objetivo en esta tienda es poder satisfacer a los
+        cliente con nuestros productos y Contar con una plataforma en internet que nos ayude promover los diferentes productos a los usuarios registrados y que puedan 
+        comprar y ver el stock .
+      </p>
+    
+                     
+                  
+    
+    </div>
+    
+            <div class="contenedor">
+                <h2 onmouseover="style.color = 'green'" onmouseout="style.color= 'black'">
+                    PRINCIPIOS
+                    </h2>
+                    <div class="col-lg-6">
+                        <img src="{% static 'img/principio.png' %}" alt="Quiénes Somos" class="img-fluid">
+                    </div>
+    
+    
+    
+    <p>Queremos entregar el mejor servicio tan cercano a la perfección como nos sea posible. Para ello nuestra guía es la
+         honestidad, responsabilidad y dedicación al trabajo.  </p>
+    <p></p>
+    
+    </div>
+    
+        <div class="contenedor">
+            <h2 onmouseover="style.color = 'green'" onmouseout="style.color= 'black'">
+                MISIÓN
+                </h2>
+                <div class="col-lg-6">
+                    <img src="{% static 'img/mision.png' %}" alt="Quiénes Somos" class="img-fluid">
+                </div>
+    
+    
+    
+    <p>Creemos que la jardinería es un medio importante ya que va en conjunto en la ayuda de cuidar el medio ambiente  
+        cuidando nuestras plantas. Nuestra misión es entregar bienestar a las personas que adquieran nuestros productos
+         y servicios .
+    
+    
+    </p>
+    
+    
+    </div>
+    
+            <div class="contenedor">
+                <h2 onmouseover="style.color = 'green'" onmouseout="style.color= 'black'">
+                    VISIÓN
+                    </h2>
+                    <div class="col-lg-6">
+                        <img src="{% static 'img/vision.png' %}" alt="Quiénes Somos" class="img-fluid">
+                    </div>
+    
+    <p>Nuestra visión como empresa es mejorar y otorgarles un mejor servicio a las personas que les interesa el tema de la jardinería ofreciéndoles nuestros
+        productos y accesorios para que sientan satisfechos y lo más conformes posibles.
+    
+    </p>
+    
+    </div>
+
+
+    <br>
+    
+    <h2 onmouseover="style.color = 'green'" onmouseout="style.color= 'black'">
+        Video de la tienda
+    </h2>
+
+    <br>
+<div class="video-wrapper">
+
+    <div class="yutub-video">
+        <iframe width="560" height="315"  src="https://www.youtube.com/embed/g9HQNsYm3E0" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; ; 
+    gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+    </div>
+
+
+
+</div>
+        
+                
+<br>
+   
+
+       
+        
+        
+    <div class="wrap">
+        <div class="widget">
+            <div class="fecha">
+    
+                <p id="diaSemana" class="diaSemana"></p>
+                <p id="dia" class="dia"></p>
+                <p>de </p>
+                <p  id="mes" class="mes"></p>
+                <p>del </p>
+                <p id="year" class="year"></p>
+                <p>-</p>
+                
+                <p id="horas" class="horas"></p>
+                <p>:</p>
+                <p id="minutos" class="minutos"></p>
+                <p>:</p>
+    
+                <p id="segundos" class="segundos"></p>
+                <p id="ampm" class="ampm"></p>
+            </div>
+        </div>
+    </div>
+
+
+        
+
+    </main><br>
+    <footer>
+
+        
+        <div class="row col-12">
+            <div class="col-lg-2">
+                <img src="{% static 'img/fondo3.png' %}" alt="logoBookStop" width="60px">
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'index' %}" id="linkFooter"><strong>INICIO</strong></a>
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'somos' %}" id="linkFooter"><strong>QUIENES SOMOS</strong></a>
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'contacto' %}" id="linkFooter"><strong>CONTACTO</strong></a>
+            </div>
+            <div class="col-lg-2">
+                <a href="{% url 'mostrar' %}" id="linkFooter"><strong>Productos</strong></a>
+            </div>
+
+            
+                
+
+            <div class="col-lg-2">
+                <strong>Síguenos</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'icon/twitter.png' %}" alt="" width="30px" height="30px"
+                        style=" margin-left: 15px;">
+                    <img src="{% static 'icon/facebook.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                    <img src="{% static 'icon/insta.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'icon/house.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>ValleEncanto 411, Talagante</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'icon/smartphone.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>+569 41001278</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'icon/contact.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Jvalledelencanto@gmail.com</p>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        
+    </footer>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/validacion.js' %}"></script>
+
+
+<script src="{% static 'js/js.js' %}"></script>
+<script src="{% static 'js/reloj.js' %}"></script>
+<script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
+
+</html>
+{% endblock %}

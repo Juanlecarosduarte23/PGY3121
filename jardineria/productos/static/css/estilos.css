@@ -1,0 +1,617 @@
+<!--navegador-->
+
+*{
+
+    padding:0;
+    margin:0;
+  }
+
+
+  #logo1{
+    width: 0px;
+    float: left;
+    margin-top:20;
+    margin-left: 20;
+    
+    padding:10px 0px 0px 40px;
+    
+    
+
+}
+  
+    #menu{
+      width:450px;
+      padding-top:10px;
+      margin:auto;
+    }
+    #menu ul a{
+      color:white;
+      text-decoration:none;
+      font-family:'Lobster variant0, Tofu';
+      padding:14px 20px 20px 20px;
+    }
+    #menu ul a:hover{
+      color: blue;
+      
+    } 
+    
+      
+  header{
+      width:100%;
+      height:50px;
+      box-shadow: 1px 1px 5px #000;
+      
+      background:#fff;
+    } 
+
+    
+
+
+*{margin: 0; padding: 0;}
+  
+  body{
+      background:#fffffa;
+  }
+  
+  p{
+    color:black;
+    text-align: center;
+    
+    
+  }
+  body {
+    background-color: #fff;
+   
+  }
+  header{
+      width:100%;
+      overflow: hidden;
+      background: #2bb700;
+      margin-bottom: 24px;
+  }  
+  .wrapper{
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+  } 
+  header .logo {
+      color: black;
+      font-size:3000px;
+      line-height:1000px ;
+      float: left;
+      font-family: 'Lobster';
+      
+
+      padding:0px 20px 20px 110px;
+  }  
+  
+  header nav{
+      float: right;
+      line-height: 200px;
+
+  }    
+  
+  header nav a{
+      display: inline-block;
+      color:black ;
+      text-decoration: none;
+      padding: 10px 15px;
+      line-height: normal;
+      font-weight:bold ;
+      font-family: 'Lobster';
+      font-size: 25px;
+      
+  }
+  
+  header nav a:hover{
+      background:white ;
+      border-radius: 50px;
+  }
+  
+  .header2{
+      
+      height: 100px;
+  } 
+  
+  .header2 .logo{
+      line-height: 100px;
+      font-size: 30px;
+  }    
+  .header2 nav{
+      line-height:100px;
+  }
+  .contenido {
+      padding-top: 10px;
+  }    
+  
+  .contenido p{
+      margin-bottom: 1em;
+      font-family: verdana;
+      
+  }
+  
+  @media screen and (max-width:950px) {
+      header.logo,
+      header nav{
+          width:100% ;
+          text-align: center;
+          line-height: 100px;
+  }
+      .header2{
+          height: auto;
+      }
+      .header2 .logo
+      .header2 nav{
+          line-height: 50px;
+      }
+  
+  }
+  
+
+
+
+  <!--carrusel-->
+
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: lato;
+}
+
+
+  .slider-frame {
+	width: 900px;
+    height: auto;
+    padding-top: 0px;
+	margin:25px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+@media screen and (max-width:950px) {
+     .slider-frame,
+     .slider-frame img              {
+        width:100% ;
+        text-align: center;
+        line-height: 100px;
+}
+    .h2{
+        height: auto;
+    }
+    .slider-frame
+    .slider-frame img{
+        line-height: 50px;
+    }
+
+}
+
+
+
+<!--footer-->
+
+  
+  *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: sans-serif;
+  }
+
+  
+  footer{
+      width: 100%;
+      background: #202020;
+      color: white; 
+      margin-top: 30px;  
+      
+  }
+  
+  .container-footer-all{
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+  }
+  
+  .container-body{
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .colum1{
+      max-width: 300px;
+  }
+  
+  .colum1 h1{
+      font-size: 22px;
+      font-family: verdana;
+  }
+  
+  .colum1 p{
+      font-size: 14px;
+      color: #C7C7C7;
+      margin-top: 20px;
+  }
+  
+  .colum2{
+      max-width: 400px;
+      
+  }
+  
+  .colum2 h1{
+      font-size: 22px;
+      font-family: verdana;
+  }
+  
+  .row{
+      margin-top: 20px;
+      display: flex;
+  }
+  
+  .row img{
+      width: 36px;
+      height: 36px;
+  }
+  
+  .row label{
+      margin-top: 10px;
+      margin-left: 20px;
+      color: #C7C7C7;
+      font-family: verdana;
+  }
+  
+  .colum3{
+      max-width: 400px;
+  }
+  
+  .colum3 h1{
+      font-size: 22px;
+      font-family: verdana;
+  }
+  
+  .row2{
+      margin-top: 20px;
+      display: flex;
+  }
+  
+  .row2 img{
+      width: 36px;
+      height: 36px;
+  }
+  
+  .row2 label{
+      margin-top: 10px;
+      margin-left: 20px;
+      max-width: 140px;
+      font-family: verdana;
+  }
+  
+  .container-footer{
+      width: 100%;  
+      background: #101010;
+      
+  }
+  
+  .footer{
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;  
+      padding: 20px;
+  }
+  
+  .copyright{
+      color: #C7C7C7;
+  }
+  
+  .copyright a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+  }
+  
+  .information a{
+      text-decoration: none;
+      color: #C7C7C7;
+  }
+  
+  
+  @media screen and (max-width: 1100px){
+      
+      .container-body{
+          flex-wrap: wrap;
+      }
+      
+      .colum1{
+          max-width: 100%;
+      }
+      
+      .colum2,
+      .colum3{
+          margin-top: 40px;
+      }
+  }
+  
+
+  
+  <!--texto-->
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster';
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 0px;
+    color: #0e0d0d;
+    font-family: 'Lobster';
+}
+
+
+h3 {
+    text-align: center;
+    font-size: 35px;
+    padding-top: 0px;
+    font-family: 'Lobster';
+    color: #0e0d0d;
+}
+
+
+
+p{
+    font-family:'Lobster' ;
+    font-size: 20px;
+    color: #000;
+
+}
+
+
+
+
+
+
+
+
+
+
+<!--galeria-->
+
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.galeria{
+    font-family:'Lobster' ;
+}
+
+.galeria h1{
+    text-align: center;
+    margin:20px 0 15px 0;
+    font-weight: 300;
+}
+
+
+
+
+.contenedor-imagenes{
+    display:flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius:3px;
+}
+
+.contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height:250px;
+    margin-bottom:5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+}
+.imagen img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+    h1{
+        font-size:22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
+
+
+
+<!--texto--imagen-->
+
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial,
+}
+body{
+    background: #f5f5f5;
+} 
+
+.contenedor{
+    width: 100;
+    max-width:960px ;
+    
+    margin: auto;
+    padding: 60px;
+    background: #fff;
+    margin-top: 50px;
+    border-radius: 50px;
+} 
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-weight: 100;
+}
+.sub-titulo{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.contenedor img{
+    width: 200px;
+    height: 180px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom:20px ;
+    clip-path: circle();
+
+}
+
+.contenedor p {
+    text-align: justify;
+    font-size: 25px;
+    font-weight:120 ;
+    margin-top: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    ;
+    border-radius: 50px;
+
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--modo--noche-->
+
+
+
+#modo{
+    width: 30px;
+    font-size: 24px;
+    margin:absolute;
+    
+    cursor: pointer;
+}
+
+.dark{
+    background: rgb(4, 24, 27);
+}
+
+.dark h1{
+    color:white;
+}
+
+.dark .descripcion{
+    color: rgb(209, 208, 208);
+}
+.dark #modo{
+    color: black;
+    
+}
+.dark .card__perfil{
+    background: rgb(16, 43, 51);
+}
+.dark p{
+    color:#fff(29, 11, 187);
+}
+.dark h2{
+    color: black;
+}
+.dark h3{
+    color: white;
+}
+.dark .container .title{
+    color: white;
+
+    
+    
+   
+}
+.dark .enlace{
+    background: rgb(13, 84, 117);
+}
+.dark .card__perfil:hover{
+    border: solid green 2px;
+}
+
+
+
+
+

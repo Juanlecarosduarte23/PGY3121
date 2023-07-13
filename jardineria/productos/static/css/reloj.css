@@ -1,0 +1,78 @@
+*{
+    
+    -webkit-box-sizing:  border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    }
+    
+    
+    body {
+  
+    
+    color:#fff;
+    font-size: 16px;
+
+    
+    }
+    
+    .wrap {
+    width: 100%;
+   
+}
+    
+    
+    .widget {
+    
+    width: 30%;
+    margin:0em;
+    text-align: right;
+    
+    
+    
+    }
+    
+
+
+.widget p {
+display: inline-block;
+line-height: 1em;
+
+}
+.fecha {
+font-family: 'Lobster';
+text-align: left;
+font-size:20px;
+
+
+
+
+
+
+padding: 8px;
+width: 100%; 
+}
+
+
+
+.reloj {
+font-family: 'Lobster';
+width: 80%;
+position: absolute;
+
+font-size: 40px;
+
+
+
+
+}
+
+.reloj .caja-segundos {
+    display: inline-block;
+}    
+
+.reloj .segundos,
+.reloj .ampm{
+    font-size: 20px;
+    display: block;
+}       

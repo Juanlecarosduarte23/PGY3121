@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!doctype html>
+<html>
+<head>
+  <title>Inicio</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  {% load static %}
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+  
+  <link href="{% static 'css/reloj.css' %}" rel="stylesheet">
+  <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  
+
+  
+  
+
+</head>
+<body>
+    <div class="container">
+        <h2> Tienda </h2><br>
+        <div class="row">
+            <div class="col-8">
+                <div class="row" style="padding: 5px 0;">
+
+                    
+                    <div class="col-12">
+                        <div class="row">
+                            {% for cosa in plantas %}
+                            <div class="col-6">
+                                <div class="card text-center">
+                                    {% if cosa.imagen %}
+                  
+                      <img src="{{ cosa.imagen.url }}" class="card-img-top mx-auto">
+                  {% else %}
+                      <img src="{% static 'img/sinfoto.webp' %}" class="card-img-top mx-auto">
+                  {% endif %}
+                  <div class="card-body">
+                      <h4 class="card-title"> Nombre : {{ cosa.nombre }}</h4>
+                      <p class="card-text">
+                        Tipo : {{ cosa.tipo }}<br>
+                        Precio:$ {{ cosa.precio }}
+                      </p>
+                      <a href="{% url 'agregar' cosa.nombre %}" class="btn btn-outline-success">Agregar al carro</a>
+                    
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+  </div>
+</div>
+<div class="col-4">
+  {% include "carrito.html" %}
+</div>
+</div>
+</div>
+</body>
+
+  <div class="wrap">
+    <div class="widget">
+        <div class="fecha">
+
+            <p id="diaSemana" class="diaSemana"></p>
+            <p id="dia" class="dia"></p>
+            <p>de </p>
+            <p  id="mes" class="mes"></p>
+            <p>del </p>
+            <p id="year" class="year"></p>
+            <p>-</p>
+            
+            <p id="horas" class="horas"></p>
+            <p>:</p>
+            <p id="minutos" class="minutos"></p>
+            <p>:</p>
+
+            <p id="segundos" class="segundos"></p>
+            <p id="ampm" class="ampm"></p>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</main><br>
+<footer>
+
+    
+    <div class="row col-12">
+        <div class="col-lg-2">
+            <img src="{% static 'img/fondo3.png' %}" alt="logoBookStop" width="60px">
+        </div>
+        <div class="col-lg-1">
+            <a href="{% url 'index' %}" id="linkFooter"><strong>INICIO</strong></a>
+        </div>
+        <div class="col-lg-1">
+            <a href="{% url 'somos' %}" id="linkFooter"><strong>QUIENES SOMOS</strong></a>
+        </div>
+        <div class="col-lg-1">
+            <a href="{% url 'contacto' %}" id="linkFooter"><strong>CONTACTO</strong></a>
+        </div>
+        <div class="col-lg-2">
+            <a href="{% url 'mostrar' %}" id="linkFooter"><strong>PRODUCTOS</strong></a>
+        </div>
+
+        
+            
+
+        <div class="col-lg-2">
+            <strong>Síguenos</strong>
+            <br><br>
+            <div class="row">
+                <img src="{% static 'icon/twitter.png' %}" alt="" width="30px" height="30px"
+                    style=" margin-left: 15px;">
+                <img src="{% static 'icon/facebook.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                <img src="{% static 'icon/insta.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-3">
+
+            <strong>Contacto</strong>
+            <br><br>
+            <div class="row">
+                <img src="{% static 'icon/house.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>ValleEncanto 411, Talagante</p>
+            </div>
+            <div class="row">
+                <img src="{% static 'icon/smartphone.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>+569 41001278</p>
+            </div>
+            <div class="row">
+                <img src="{% static 'icon/contact.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>Jvalledelencanto@gmail.com</p>
+            </div>
+           
+
+           
+        </div>
+    </div>
+
+
+    
+</footer>
+
+
+<script src="{% static 'js/js.js' %}"></script>
+<script src="{% static 'js/reloj.js' %}"></script>
+<script src="{% static 'js/metodos.js' %}"></script>
+
+
+</body>
+</html>
+{% endblock %}
